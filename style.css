@@ -1,0 +1,120 @@
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+        padding-top: 60px;
+}
+    body:hover {
+        cursor: url('./img/icon1.png') 10 10, auto;
+    }
+
+
+#wall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+.trip-card {
+    padding: 1.5rem 1rem;
+    border: 1px solid #ccc;
+    border-left: 6px solid #3a86ff;
+    background: repeating-linear-gradient(
+            white,
+            white 28px,
+            #d3d3d3 29px
+    );
+    border-radius: 4px;
+    position: relative;
+    width: 220px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 8px;
+    height: calc(100% - 20px);
+    background: radial-gradient(circle at center, #666 2px, transparent 3px) repeat-y;
+    background-size: 8px 30px;
+}
+
+form {
+    display: none;
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    max-width: 400px;
+}
+form input {
+    padding: 0.5rem;
+}
+
+#popup-banner {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffdd57;
+    color: #333;
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 999;
+}
+
+@keyframes fadeInPlane {
+    from { opacity: 0; transform: translateX(-50%) scale(0.95); }
+    to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+#vanta-bg img {
+    animation: fadeInPlane 3s ease-in-out;
+}
+
+#vanta-bg {
+    padding-top: 80px;
+}
+
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to right, #50dfbe, #6a0dad);
+    background-size: 600% 100%;
+    animation: gradientShift 12s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    33% { background-position: 50% 50%; }
+    66% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+
