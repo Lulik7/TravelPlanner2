@@ -1,10 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Planner App</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
 </head>
 <body>
-$END$
+
+<nav class="main-nav">
+    <a href="#">Flights</a>
+    <a href="#">Stays</a>
+    <a href="#">Car Hire</a>
+    <a href="#">My Bookings</a>
+</nav>
+
+
+<div id="vanta-bg" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;">
+
+
+    <img src="./img/plane.png" alt="Airplane"
+         style="position: absolute; top: 290px; left: 70%; transform: translateX(-50%);
+              width: 400px; z-index: 2; pointer-events: none;" />
+
+
+    <div id="popup-banner">Choose Your Trip Now!</div>
+
+    <h1 >🧳 Travel Planner</h1>
+    <button id="addBtn" style="display: block; margin: 20px auto 20px 200px;">Add Travel</button>
+    <form id="travelForm" ;>
+    <input type="text" id="to" placeholder="To (Destination)" required />
+    <input type="date" id="start" required />
+    <input type="date" id="finish" required />
+    <input type="number" id="budget" placeholder="Budget ($)" required />
+    <button type="submit">Submit</button>
+</form>
+
+<div id="wall"></div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+
+<script src="travel-planner.js"></script>
 </body>
 </html>
